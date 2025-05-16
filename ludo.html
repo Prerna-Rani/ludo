@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ludo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .green {
+            background-color: #259701
+        }
+
+        .blue {
+            background-color: #01a7b7;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .gray {
+            background-color: gray;
+        }
+
+        .orange {
+            background-color: orangered;
+        }
+
+        .black {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .yellow {
+            background-color: #f1ad02;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .main_ludo_box {
+            height: 800px;
+            width: 800px;
+            border: 20px solid black;
+        }
+
+        .row_40 {
+            height: 40%;
+        }
+
+        .row_20 {
+            height: 20%;
+        }
+
+        .col_40 {
+            width: 40%;
+            height: 100%;
+        }
+
+        .col_20 {
+            height: 100%;
+            width: 20%
+        }
+
+        .border {
+            border: 2px solid black
+        }
+
+        .row_33 {
+            width: 100%;
+            height: 33.3333%;
+        }
+
+        .col_16 {
+            height: 100%;
+            width: 16.666%;
+        }
+
+        .row_16 {
+            height: 16.666%;
+            width: 100%;
+        }
+
+        .col_33 {
+            height: 100%;
+            width: 33.333%;
+        }
+
+        .row_15 {
+            height: 15%;
+            width: 100%;
+        }
+
+        .row_70 {
+            height: 70%;
+            width: 100%;
+        }
+
+        .col_15 {
+            height: 100%;
+            width: 15%;
+        }
+
+        .col_70 {
+            height: 100%;
+            width: 70%
+        }
+
+        .col_27 {
+            height: 27.5%;
+            width: 100%;
+        }
+
+        .col_inner_27 {
+            height: 100%;
+            width: 27.5%;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .star {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            height: 100%;
+            width: 100%;
+        }
+
+        .upperarrow {
+            clip-path: polygon(45% 29%, 0 58%, 51% 0, 100% 64%, 53% 28%, 62% 100%, 42% 100%);
+            height: 100%;
+            width: 100%;
+        }
+
+        .downarrow {
+            clip-path: polygon(0 40%, 44% 67%, 38% 0, 61% 0, 54% 66%, 99% 39%, 49% 99%);
+            height: 100%;
+            width: 100%;
+        }
+
+        .rightarrow {
+            clip-path: polygon(59% 44%, 0 42%, 0 57%, 57% 52%, 38% 98%, 99% 39%, 39% 0);
+            height: 100%;
+            width: 100%;
+        }
+
+        .leftarrow {
+            clip-path: polygon(61% 0, 0 49%, 57% 100%, 41% 53%, 100% 55%, 99% 39%, 41% 44%);
+            height: 100%;
+            width: 100%;
+        }
+
+        .ludowinner {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="main_ludo_box">
+            <div class="row_40 flex">
+                <div class="col_40 ">
+                    <div class="row_15 green"></div>
+                    <div class="row_70 flex">
+                        <div class="col_15 green"></div>
+                        <div class="col_70">
+                            <div class="row_15"></div>
+                            <div class="col_27 flex">
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 green circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 green circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                            </div>
+                            <div class="row_15"></div>
+                            <div class="col_27 flex">
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 green circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 green circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                            </div>
+                            <div class="row_15"></div>
+                        </div>
+                        <div class="col_15 green"></div>
+                    </div>
+                    <div class="row_15 green"></div>
+                </div>
+                <div class="col_20 white">
+                    <div class="row_16 flex">
+                        <div class="col_33 border"></div>
+                        <div class="col_33 border">
+                            <div class="downarrow yellow"></div>
+                        </div>
+                        <div class="col_33 border"></div>
+                    </div>
+                    <div class="row_16 flex">
+                        <div class="col_33 border"></div>
+                        <div class="col_33 border yellow"></div>
+                        <div class="col_33 border yellow">
+                            <div class="star white"></div>
+                        </div>
+                    </div>
+                    <div class="row_16 flex">
+                        <div class="col_33 border">
+                            <div class="star green"></div>
+                        </div>
+                        <div class="col_33 border yellow"></div>
+                        <div class="col_33 border"></div>
+                    </div>
+                    <div class="row_16 flex">
+                        <div class="col_33 border"></div>
+                        <div class="col_33 border yellow"></div>
+                        <div class="col_33 border"></div>
+                    </div>
+                    <div class="row_16 flex">
+                        <div class="col_33 border"></div>
+                        <div class="col_33 border yellow"></div>
+                        <div class="col_33 border"></div>
+                    </div>
+                    <div class="row_16 flex">
+                        <div class="col_33 border"></div>
+                        <div class="col_33 border yellow"></div>
+                        <div class="col_33 border"></div>
+                    </div>
+                </div>
+                <div class="col_40">
+                    <div class="row_15 yellow"></div>
+                    <div class="row_70 flex">
+                        <div class="col_15 yellow"></div>
+                        <div class="col_70">
+                            <div class="row_15"></div>
+                            <div class="col_27 flex">
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 yellow circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 yellow circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                            </div>
+                            <div class="row_15"></div>
+                            <div class="col_27 flex">
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 yellow circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 yellow circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                            </div>
+                            <div class="row_15"></div>
+                        </div>
+                        <div class="col_15 yellow"></div>
+                    </div>
+                    <div class="row_15 yellow"></div>
+                </div>
+            </div>
+            <div class="row_20 flex">
+                <div class="col_40 white">
+                    <div class="row_33 flex">
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border green">
+                            <div class="star white"></div>
+                        </div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                    </div>
+                    <div class="row_33  flex">
+                        <div class="col_16 border">
+                            <div class="rightarrow green"></div>
+                        </div>
+                        <div class="col_16 border green"></div>
+                        <div class="col_16 border green"></div>
+                        <div class="col_16 border green"></div>
+                        <div class="col_16 border green"></div>
+                        <div class="col_16 border green"></div>
+                    </div>
+                    <div class="row_33 flex">
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border">
+                            <div class="star red"></div>
+                        </div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                    </div>
+                </div>
+                <div class="col_20 ">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLVbfSSt8rT2uGB5cEVFHW_Mirs8ZhDW8i_e2EL1MG8dtCDdwhE6aKUdx0lhMG7J-3rW4&usqp=CAU"
+                        alt="" class="ludowinner">
+                </div>
+                <div class="col_40">
+                    <div class="row_33 flex">
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border">
+                            <div class="star yellow"></div>
+                        </div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                    </div>
+                    <div class="row_33  flex">
+                        <div class="col_16 border blue"></div>
+                        <div class="col_16 border blue"></div>
+                        <div class="col_16 border blue"></div>
+                        <div class="col_16 border blue"></div>
+                        <div class="col_16 border blue"></div>
+                        <div class="col_16 border">
+                            <div class="leftarrow blue"></div>
+                        </div>
+                    </div>
+                    <div class="row_33 flex">
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border"></div>
+                        <div class="col_16 border blue">
+                            <div class="star white"></div>
+                        </div>
+                        <div class="col_16 border"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row_40 flex">
+                <div class="col_40">
+                    <div class="row_15 red"></div>
+                    <div class="row_70 flex">
+                        <div class="col_15 red"></div>
+                        <div class="col_70">
+                            <div class="row_15"></div>
+                            <div class="col_27 flex">
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 red circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 red circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                            </div>
+                            <div class="row_15"></div>
+                            <div class="col_27 flex">
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 red circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 red circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                            </div>
+                            <div class="row_15"></div>
+                        </div>
+                        <div class="col_15 red"></div>
+                    </div>
+                    <div class="row_15 red"></div>
+                </div>
+                <div class="col_20 white">
+                    <div class="row_16 flex">
+                        <div class="col_33 border"></div>
+                        <div class="col_33 border red"></div>
+                        <div class="col_33 border"></div>
+                    </div>
+                    <div class="row_16 flex">
+                        <div class="col_33 border"></div>
+                        <div class="col_33 border red"></div>
+                        <div class="col_33 border"></div>
+                    </div>
+                    <div class="row_16 flex">
+                        <div class="col_33 border"></div>
+                        <div class="col_33 border red"></div>
+                        <div class="col_33 border"></div>
+                    </div>
+                    <div class="row_16 flex">
+                        <div class="col_33 border"></div>
+                        <div class="col_33 border red"></div>
+                        <div class="col_33 border">
+                            <div class="star blue"></div>
+                        </div>
+                    </div>
+                    <div class="row_16 flex">
+                        <div class="col_33 border red">
+                            <div class="star white"></div>
+                        </div>
+                        <div class="col_33 border red"></div>
+                        <div class="col_33 border"></div>
+                    </div>
+                    <div class="row_16 flex">
+                        <div class="col_33 border"></div>
+                        <div class="col_33 border">
+                            <div class="upperarrow red"></div>
+                        </div>
+                        <div class="col_33 border"></div>
+                    </div>
+                </div>
+                <div class="col_40 ">
+                    <div class="row_15 blue"></div>
+                    <div class="row_70 flex">
+                        <div class="col_15 blue"></div>
+                        <div class="col_70">
+                            <div class="row_15"></div>
+                            <div class="col_27 flex">
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 blue circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 blue circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                            </div>
+                            <div class="row_15"></div>
+                            <div class="col_27 flex">
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 blue circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                                <div class="col_inner_27 blue circle">
+                                    <div class="star white"></div>
+                                </div>
+                                <div class="col_15"></div>
+                            </div>
+                            <div class="row_15"></div>
+                        </div>
+                        <div class="col_15 blue"></div>
+                    </div>
+                    <div class="row_15 blue"></div>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>
